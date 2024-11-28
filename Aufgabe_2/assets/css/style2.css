@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Nunito_Regular;
+    src: url("../font/Nunito-Regular.ttf");
+}
+
+@font-face {
+    font-family: RockSalt_Regular;
+    src: url("../font/RockSalt-Regular.ttf");
+}
+
+:root {
+    --main-color: #DF8480;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* Hier header */
+
+header {
+    background-image: url("../img/doggy.png");
+    width: 100%;
+    padding: 100%;
+    background-repeat: no-repeat;
+}
+
+header h2 {
+    text-align: center;
+}

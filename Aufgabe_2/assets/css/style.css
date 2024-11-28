@@ -1,0 +1,183 @@
+@font-face {
+    font-family: Nunito_Regular;
+    src: url("../font/Nunito-Regular.ttf");
+}
+
+@font-face {
+    font-family: RockSalt_Regular;
+    src: url("../font/RockSalt-Regular.ttf");
+}
+
+:root {
+    --main-color: #DF8480;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* Hier header */
+
+header p {
+    font-size: 24px;
+    font-family: RockSalt_Regular;
+    text-align: center;
+}
+
+.ChompBild {
+    display: none;
+}
+
+header section {
+    display: flex;
+}
+
+header .redbackground, header img {
+    width: 50%;
+    margin-bottom: 2.4rem;;
+}
+
+.redbackground {
+    background-color: var(--main-color);
+}
+
+.redbackground h1 {
+    font-family: Nunito_Regular;
+    font-size: 36px;
+    color: white;
+    width: 45%;
+    text-align: right;
+    margin-left: 50%;
+    margin-right: 20px;
+}
+
+
+section h2 {
+    font-size: 48px;
+    color: var(--main-color);
+    font-family: Nunito_Regular;
+    font-weight: 900;
+    margin-bottom: 2.4rem;
+    text-align: center;
+}
+
+
+.reihenfolge {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 8vw;
+    margin-bottom: 2.4rem;
+    gap: 4vw;
+}
+
+.erstens, .zweitens, .drittens {
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px grey;
+    width: 30vw;
+    height: 28vh;
+    padding: 5vh 3vw;
+}
+
+section article:first-of-type p {
+    font-family: Nunito_Regular;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.bilderreihe {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2vw;
+
+}
+
+.bilderreihe p {
+    color: white;
+    background-color: var(--main-color);
+    font-family: Nunito_Regular;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    width: 20vw;
+    height: 250px;
+    padding: 70px 2vw;
+}
+
+
+
+
+/* Hier media query */
+
+@media screen and (max-width: 900px) {
+    header section div {
+        display: none;
+    }
+    
+    header section img {
+    width: 100%;
+}
+
+.ChompOben {
+    display: none;
+}
+
+.ChompBild {
+    display: block;
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 1;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* main section hier */
+
+section h2:not(.nummertitle) {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.reihenfolge {
+    flex-direction: column;
+}
+
+.erstens, .zweitens, .drittens {
+    box-shadow: none;
+    display: flex;
+}
+
+.nummertitle {
+    margin-right: 30px;
+}
+
+.beschreibungReihenfolge {
+width: 100%;
+}
+
+/* !Hier bin ich. letztes funktionier tnicht */
+}
+
+
+
+
+    

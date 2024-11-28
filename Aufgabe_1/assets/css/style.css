@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+header, aside, .jedesarticle, footer {
+    background-color: aqua;
+    height: 50px;
+    text-align: center;
+    padding: 12px 0;
+    border: 3px solid white;
+}
+
+.erstearticles {
+    display: flex;
+}
+
+.zweitearticles {
+    display: flex;
+}
+
+.jedesarticle {
+    width: 50%;
+}
+
+.eins {
+    background-color: rgb(56, 159, 56);
+}
+
+.zwei {
+    background-color: orange;
+}
+
+.drei {
+    background-color: pink;
+}
+
+.vier { 
+    background-color: yellowgreen;
+}
+
+aside {
+    background-color: blueviolet;
+    float: right;
+    width: 30%;
+    height: 150px;
+    padding: 70px 0;
+}
+
+/* !Nimmt Größe nicht */
+
+footer {
+    background-color: rgb(63, 63, 147);
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        height: 50px;
+        padding: 12px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
+    .umbruchhandy {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .erstearticles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .zweitearticles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .jedesarticle {
+        width: 100%;
+    }
+}
+
+
+/* !Nimmt flex direction nicht */
