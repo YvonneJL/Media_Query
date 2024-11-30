@@ -87,10 +87,10 @@ section h2 {
     box-shadow: 2px 2px 4px grey;
     width: 30vw;
     height: 28vh;
-    padding: 5vh 3vw;
+    padding: 2vh 3vw;
 }
 
-section article:first-of-type p {
+.beschreibungReihenfolge {
     font-family: Nunito_Regular;
     font-size: 16px;
     text-align: center;
@@ -116,6 +116,71 @@ section article:first-of-type p {
     width: 20vw;
     height: 250px;
     padding: 70px 2vw;
+}
+
+main section article:nth-of-type(2) {
+    margin-bottom: 16px;
+}
+
+footer {
+    background-color: #242424;
+    font-family: Nunito_Regular;
+    font-size: 1.6rem;
+}
+
+footer article {
+    display: flex;
+}
+
+footer article:first-of-type {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+footer p {
+    padding: 2rem;
+    color: white;
+    width: 30vw;
+    text-align: center;
+}
+
+footer article:nth-of-type(1) a {
+    text-decoration: none;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 25px;
+    display: inline-block;
+    text-align: center;
+    width: 30vw;
+}
+
+footer  article:nth-of-type(1) a:first-of-type {
+    color: #7b7b7b;
+    background-color: white; 
+}
+
+footer article:nth-of-type(1) a:nth-of-type(2) {
+    color: white;
+    background-color: var(--main-color); 
+}
+
+footer article:nth-of-type(2) {
+    margin-left: 0.5rem;
+    justify-content: space-between;
+}
+
+footer article:nth-of-type(2) img{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+footer article:nth-of-type(2) p {
+    display: inline-block;
+    padding: 4rem 2rem 0 2rem;
+    padding-bottom: 1rem;
+    text-align: right;
 }
 
 
@@ -148,6 +213,11 @@ header section {
     flex-direction: column;
 }
 
+
+header section img {
+   margin-bottom: 0;
+}
+
 /* main section hier */
 
 section h2:not(.nummertitle) {
@@ -164,6 +234,10 @@ section h2:not(.nummertitle) {
 .erstens, .zweitens, .drittens {
     box-shadow: none;
     display: flex;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    
 }
 
 .nummertitle {
@@ -172,12 +246,102 @@ section h2:not(.nummertitle) {
 
 .beschreibungReihenfolge {
 width: 100%;
+text-align: left;
 }
 
-/* !Hier bin ich. letztes funktionier tnicht */
+main section > h2:nth-of-type(2) {
+    margin-bottom: 0;
+}
+
+.bilderreihe {
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.bilderreihe img {
+    width: 48%;
+}
+
+.bilderreihe img:nth-of-type(1) {
+    margin-right: 1%;
+}
+
+.bilderreihe img:nth-of-type(2) {
+    margin-left: 1%;
+}
+
+.bilderreihe p {
+    width: 100%; 
+    border-radius: none;
+    background-color: white;
+    color: black;
+    height: 100px;
+    padding: 20px 10px;
+}
 }
 
 
+@media screen and (max-width: 600px) {
 
+
+
+    .reihenfolge {
+        display: block;
+    }
+
+    .erstens, .zweitens, .drittens {
+    display: block;
+    height: 30vh;
+    }
+
+    .nummertitle {
+        text-align: center;
+    }
+
+    .beschreibungReihenfolge {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .bilderreihe {
+        display: inline-block;
+    }
+
+
+    /* ! Eins drunter keine gute Lösung-verzerrt Bild-müsste Bild in Container packen, um nur einen Ausschnitt anzeigen zu lassen?-->lieber nicht, da ich sonst alles nochmals durchgehen muss */
+
+    .bilderreihe img:first-of-type {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .bilderreihe img:nth-of-type(2) {
+        margin-left: 15%;
+        width: 70%;
+        padding: 0 30px;
+    }
+
+    footer p:first-of-type, footer article:first-of-type a {
+        width: 80%;
+    }
+
+    footer article:nth-of-type(2) {
+        display: inline-block;
+        width: 100%;
+    }
+
+    footer article:nth-of-type(2) div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer article:nth-of-type(2) p {
+        text-align: center;
+        width: 100%;
+        padding: 2rem 2rem 4rem 2rem;
+    }
+
+   
+}
 
     
